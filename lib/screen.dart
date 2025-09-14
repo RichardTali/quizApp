@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/multi.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -34,7 +35,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   SizedBox(height: 12),
                   ElevatedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MultiScreen(),
+                          ),
+                        );
+                    },
                      child: Text('Iniciar Juego'),),
                 ],
               )),
